@@ -1,0 +1,41 @@
+.SearchDiv{
+    border-bottom: 1px solid;
+    height: 30px;
+    width: 81px;
+    height: 20px;
+    box-sizing: content-box;
+}
+.MainSection{
+    display: flex;
+    column-gap: 8vh;
+}
+.SurveyListFirstLine{
+    display: flex;
+    column-gap: 3vh;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: content-box;
+    margin-top: 2vh;
+    width: 166vh;
+}
+.searchImg{
+    display: flex;
+    align-items: center;
+    height: 2vh;
+
+}
+
+.filterDiv{
+    display: flex;
+    margin-left: 121vh;
+    position: unset;
+    column-gap: 4vh;
+}
+.filterDiv button{
+    background-color: #278DF1;
+    color: white;
+    width: 11vh;
+    border: none;
+    border-radius: 11px;
+    height: 4vh;
+}

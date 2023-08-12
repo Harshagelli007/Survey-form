@@ -1,13 +1,22 @@
-import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Componants/Authentication/Login";
 import Signup from "./Componants/Authentication/Signup";
-
+import Homepage from "./Componants/Home/Homepage";
+import SurveyList from "./Componants/SurveyList/SurveyList";
 function App() {
+  // return<>
+  // <SurveyList/>
+  // </>
   return (
-    <div className="App">
-      <Login />
-      {/* <Signup /> */}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        {/* <Route path="/home" element={<Homepage />} /> */}
+        <Route path="/home" element={<SurveyList />} />
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 
