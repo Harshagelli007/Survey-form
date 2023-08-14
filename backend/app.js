@@ -14,6 +14,7 @@ dotenv.config();
 // connection to DB
 connectDB();
 
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -21,7 +22,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/user", userRoutes);
-app.use(cors());
 app.use(errorHandler);
 app.use(notFound);
 
