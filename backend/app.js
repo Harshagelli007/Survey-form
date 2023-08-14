@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors');
 
 const dotenv = require("dotenv");
 const connectDB = require("./Config/db");
@@ -20,7 +21,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/user", userRoutes);
-
+app.use(cors());
 app.use(errorHandler);
 app.use(notFound);
 
