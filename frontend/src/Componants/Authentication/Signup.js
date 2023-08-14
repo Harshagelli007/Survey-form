@@ -5,6 +5,7 @@ import axios from "axios";
 import "./Signup.css";
 import "./Login.css";
 
+
 const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -15,8 +16,11 @@ const Signup = () => {
 
   const navigate = useNavigate(true);
 
-  const submitHandler = async () => {
+  const submitHandler = async (e) => {
     // console.log(name, email, password, phone, profession, confirmPassword);
+
+    // <<< preventDefault will added here >>>
+    e.preventDefault()
 
     if (
       !name ||
@@ -36,7 +40,7 @@ const Signup = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/user", {
+      axios.post("http://localhost:5000/api/user", {
         name,
         email,
         phone,
